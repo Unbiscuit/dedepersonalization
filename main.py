@@ -115,6 +115,8 @@ def main():
     # get_numbers()
     wb = load_workbook(filename='student_v.1.03.xlsx')
     ws = wb.active
+    ws['D1'] = 'сдвиг почты'
+    ws['E1'] = 'сдвиг адреса'
     with open('cracked.txt', 'r') as file:
         text = file.readlines()
         for i in range(2, ws.max_row + 1):
