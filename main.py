@@ -121,7 +121,7 @@ def main():
         text = file.readlines()
         for i in range(2, ws.max_row + 1):
             string = text[i - 2]
-            string = string[string.index(':') + 1:]
+            string = string[string.index(':') + 1:].replace('\n', '')
             ws[f'A{i}'] = string
             shift = find_shift_mail(ws, i)
             ws[f'D{i}'] = shift
